@@ -77,12 +77,17 @@ class ItemsController extends GetxController {
   }
 
   void filterAscending() {
-    showedItems.sort((a, b) => a.quantity.compareTo(b.quantity),);
+    showedItems.sort(
+      (a, b) => a.quantity.compareTo(b.quantity),
+    );
     _filter = SelectedFilter.ascending;
     update();
   }
+
   void filterDescending() {
-    showedItems.sort((a, b) => b.quantity.compareTo(a.quantity),);
+    showedItems.sort(
+      (a, b) => b.quantity.compareTo(a.quantity),
+    );
     _filter = SelectedFilter.descending;
     update();
   }

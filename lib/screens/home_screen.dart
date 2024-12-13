@@ -50,6 +50,11 @@ class HomeScreen extends StatelessWidget {
                       onSubmitted: (value) {
                         controller.search(value);
                       },
+                      onChanged: (value) {
+                        if (value.isEmpty) {
+                          controller.search(value);
+                        }
+                      },
                     );
                   },
                 ),
